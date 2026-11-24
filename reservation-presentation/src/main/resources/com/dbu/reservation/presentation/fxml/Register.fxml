@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?><?import javafx.scene.layout.*?><GridPane xmlns:fx="http://javafx.com/fxml" hgap="8" vgap="8" styleClass="page"><Label text="Registration"/><TextField promptText="Full name"/><TextField promptText="University ID"/><TextField promptText="Email"/><TextField promptText="Department ID"/><PasswordField promptText="Password"/><ComboBox promptText="Student or Lecturer"/><Button text="Submit registration"/></GridPane>

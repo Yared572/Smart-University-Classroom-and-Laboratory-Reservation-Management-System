@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?><?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml" spacing="12" styleClass="page"><Label text="Debre Berhan University"/><Label text="Classroom and Laboratory Reservations"/><TextField promptText="University ID"/><PasswordField promptText="Password"/><HBox spacing="8"><Button text="Sign in"/><Button text="Register"/></HBox></VBox>

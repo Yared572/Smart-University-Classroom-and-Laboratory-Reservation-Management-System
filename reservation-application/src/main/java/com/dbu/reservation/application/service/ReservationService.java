@@ -1,0 +1,6 @@
+package com.dbu.reservation.application.service;
+import com.dbu.reservation.application.dto.ReservationRequest;
+import com.dbu.reservation.domain.model.*;
+import com.dbu.reservation.domain.repository.ReservationRepository;
+import java.util.List;
+public final class ReservationService {private final ReservationRepository reservations;public ReservationService(ReservationRepository reservations){this.reservations=reservations;}public void request(User user,ReservationRequest r){if(user==null)throw new IllegalArgumentException("Sign in first.");if(r.date()==null||r.date().isBefore(java.time.LocalDate.now()))throw new IllegalArgumentException("Reservation date cannot be in the past.");if(r.start()==null||r.end()==null||!r.start().isBefore(r.end()))throw new IllegalArgumentException("Start time must be earlier than end time.");if(r.participants()<1||r.participants()>r.room().capacity())throw new IllegalArgumentException("Participant count exceeds room capacity.");if(r.purpose().isBlank())throw new IllegalArgumentException("Purpose is required.");reservations.request(user.id(),r.room().id(),r.date(),r.start(),r.end(),r.participants(),r.purpose(),r.description());}public List<Reservation> mine(User user){return reservations.findByUser(user.id());}}

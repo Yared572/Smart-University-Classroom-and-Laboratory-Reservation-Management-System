@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><?import javafx.scene.control.*?><?import javafx.scene.layout.*?><BorderPane xmlns:fx="http://javafx.com/fxml" styleClass="page"><top><Label text="Administrator Dashboard"/></top><center><TabPane><tabs><Tab text="Approvals"/><Tab text="Rooms"/><Tab text="Users"/><Tab text="Reports"/></tabs></TabPane></center></BorderPane>
